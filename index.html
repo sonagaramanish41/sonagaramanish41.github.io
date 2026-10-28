@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Manish Sonagara — BDE professional and MERN Stack developer.">
+<title>Manish Sonagara — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090909;--panel:#0d0d0f;--line:#27272a;--muted:#898990;--white:#f0eff1;--gold:#ffa900;--mono:'DM Mono',monospace;--body:'Manrope',sans-serif;--display:'Barlow Condensed',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--white);font-family:var(--body);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:linear-gradient(to right,transparent calc(100% - 1px),rgba(255,255,255,.055) calc(100% - 1px));background-size:20.1% 100%;opacity:.65}
+a{color:inherit;text-decoration:none}.topbar{height:70px;position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 max(5vw,24px);background:rgba(8,8,9,.91);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{font-weight:900;font-size:clamp(14px,1.4vw,21px);letter-spacing:-.06em;white-space:nowrap}.brand-mark{display:inline-grid;place-items:center;width:25px;height:25px;margin-right:9px;border:1px solid #777;font-family:var(--mono);font-size:11px;color:var(--gold);vertical-align:middle}
+.nav{display:flex;gap:clamp(10px,2vw,32px);align-items:center}.nav a,.micro{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#c6c5ca;transition:color .2s}.nav a span{color:#5c5b61;margin-right:5px}.nav a:hover,.nav a.active{color:var(--gold)}.resume{background:var(--gold);color:#111!important;padding:15px 20px;font-weight:700!important}
+main{padding-top:70px}.section{padding:72px max(6.4vw,24px);border-bottom:1px solid var(--line);position:relative}.section-kicker{display:flex;align-items:center;gap:16px;font:500 12px var(--mono);letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:28px}.section-kicker b{color:var(--gold);font-weight:500}.section-kicker:after{content:"";height:1px;background:var(--line);flex:1;max-width:280px}
+.hero{min-height:calc(100vh - 70px);padding-top:60px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}.hero .section-kicker{max-width:400px}
+h1,h2,h3,p{margin-top:0}h1{font:800 clamp(58px,9.5vw,150px)/.82 var(--display);letter-spacing:-.035em;text-transform:uppercase;max-width:1120px;margin:10px 0 38px}h1 .outline{-webkit-text-stroke:1px #777;color:transparent}h1 .gold{color:var(--gold)}
+.hero-bottom{display:grid;grid-template-columns:minmax(0,1.15fr) 220px minmax(270px,.8fr);gap:clamp(18px,3vw,42px);align-items:end;margin-top:20px}.portrait-wrap{position:relative;border:1px solid var(--line);padding:8px;background:#0d0d0f;align-self:stretch;min-height:300px;max-height:430px}.portrait-wrap img{display:block;width:100%;height:100%;min-height:284px;max-height:412px;object-fit:cover;object-position:center 44%;filter:saturate(.88)}.portrait-label{position:absolute;left:16px;bottom:16px;background:#090909e8;border:1px solid var(--line);padding:8px 10px;font:10px var(--mono);letter-spacing:.12em;color:var(--gold)}.intro{font-size:clamp(15px,1.35vw,19px);line-height:1.85;color:var(--muted);max-width:760px}.intro strong{color:var(--white)}.intro p{margin-bottom:18px}.terminal{border:1px solid var(--line);background:rgba(14,14,16,.8);padding:22px 24px;font:12px/1.9 var(--mono);color:#aaa}.terminal-head{display:flex;justify-content:space-between;color:var(--gold);letter-spacing:.12em;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:14px}.terminal .key{color:#5d5d64;display:inline-block;width:72px}.terminal .value{color:#e9e8ea}.terminal .status{color:var(--gold)}
+.big-title{font:800 clamp(48px,7.1vw,104px)/.9 var(--display);text-transform:uppercase;letter-spacing:-.025em;margin:0 0 48px}.section-sub{color:var(--muted);max-width:650px;line-height:1.8}
+.work-card{border:1px solid var(--line);padding:28px 30px;margin-top:20px;transition:border-color .25s,transform .25s;background:linear-gradient(130deg,#0e0e10,#090909)}.work-card:hover{border-color:#69501d;transform:translateY(-3px)}.card-top{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:22px}.card-num{font:12px var(--mono);color:var(--gold)}.card-title{font-size:clamp(22px,2.3vw,32px);font-weight:800;letter-spacing:-.04em;margin:0 0 7px}.card-desc{color:var(--muted);line-height:1.7;margin-bottom:22px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{border:1px solid var(--line);padding:8px 10px;font:10px var(--mono);color:#b4b3b8;letter-spacing:.06em;text-transform:uppercase}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.small-card{border:1px solid var(--line);padding:25px;min-height:175px;background:#0b0b0d}.small-card .micro{color:var(--gold)}.small-card h3{font-size:23px;letter-spacing:-.04em;margin:22px 0 8px}.small-card p{color:var(--muted);line-height:1.65;font-size:14px;margin-bottom:0}
+.exp-table{border-top:1px solid var(--line)}.exp-row{display:grid;grid-template-columns:70px 1fr 190px;gap:20px;padding:28px 0;border-bottom:1px solid var(--line)}.ref{font:13px var(--mono);color:var(--gold);padding-top:5px}.role{font-size:clamp(20px,2vw,28px);font-weight:800;letter-spacing:-.04em;margin-bottom:8px}.org{font:500 12px var(--mono);letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:15px}.detail{color:var(--muted);line-height:1.8;margin:0}.period{text-align:right;font:12px/1.9 var(--mono);letter-spacing:.07em}.period span{display:block;color:#68676e}
+.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.stack-item{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:100px}.stack-item strong{display:block;font-size:18px;margin-bottom:8px}.stack-item span{font:10px var(--mono);letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.subheading{font:11px var(--mono);letter-spacing:.16em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:0}.edu-row,.cred-row{padding:22px 0;border-bottom:1px solid var(--line)}.edu-row h3,.cred-row h3{font-size:20px;margin:0 0 7px;letter-spacing:-.03em}.edu-row p,.cred-row p{color:var(--muted);font-size:14px;margin:0;line-height:1.7}.edu-row .year{font:11px var(--mono);color:var(--gold);margin-top:10px}
+.contact-title{font:800 clamp(45px,7.2vw,100px)/.9 var(--display);text-transform:uppercase;letter-spacing:-.03em;max-width:1050px;margin-bottom:28px}.contact-list{margin-top:50px;border-top:1px solid var(--line)}.contact-row{display:grid;grid-template-columns:180px 1fr auto;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center}.contact-label{font:11px var(--mono);letter-spacing:.15em;color:var(--muted);text-transform:uppercase}.contact-value{font:500 clamp(15px,1.7vw,21px) var(--mono);overflow-wrap:anywhere}.copy{background:none;color:var(--white);border:0;font:11px var(--mono);cursor:pointer;letter-spacing:.1em}.copy:hover{color:var(--gold)}footer{padding:24px max(6.4vw,24px);display:flex;justify-content:space-between;gap:20px;color:#626168;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.progress{position:fixed;z-index:30;bottom:15px;left:20px;border:1px solid var(--line);background:#0b0b0de8;padding:11px 14px;font:10px var(--mono);letter-spacing:.12em;color:#85848b}.progress b{color:var(--gold);font-weight:500}.progress-line{display:inline-block;width:45px;height:2px;background:var(--line);vertical-align:middle;margin:0 8px}.progress-line i{display:block;height:100%;width:0;background:var(--gold)}
+@media(max-width:1050px){.hero-bottom{grid-template-columns:minmax(0,1fr) 190px}.hero-bottom .intro{grid-column:1/-1}.portrait-wrap{grid-column:1;grid-row:2;max-width:300px;width:100%}.terminal{grid-column:2;grid-row:2}}@media(max-width:900px){.nav{gap:10px}.nav a{font-size:9px}.nav a span{display:none}.hero-bottom{grid-template-columns:1fr}.hero-bottom .intro{grid-column:auto}.portrait-wrap{grid-column:auto;grid-row:auto;max-width:360px;min-height:320px}.terminal{grid-column:auto;grid-row:auto;max-width:560px}.grid3{grid-template-columns:1fr 1fr}.stack-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.topbar{height:auto;min-height:66px;padding:14px 18px;flex-wrap:wrap;gap:12px}.nav{order:3;width:100%;overflow:auto;padding:4px 0 2px;gap:18px}.nav a{white-space:nowrap}.resume{padding:10px 13px!important}.brand{font-size:16px}main{padding-top:100px}.section{padding:50px 22px}.hero{min-height:calc(100vh - 100px)}h1{font-size:clamp(50px,15vw,85px)}.big-title{font-size:clamp(44px,13vw,70px);margin-bottom:32px}.grid3,.cred-grid{grid-template-columns:1fr;gap:15px}.exp-row{grid-template-columns:35px 1fr;gap:12px}.period{grid-column:2;text-align:left}.stack-grid{grid-template-columns:repeat(2,1fr)}.stack-item{padding:16px}.contact-row{grid-template-columns:1fr auto;gap:8px}.contact-label{grid-column:1/-1}.contact-value{font-size:14px}.copy{grid-column:2;grid-row:2}footer{flex-direction:column}.progress{left:8px;bottom:8px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#index"><span class="brand-mark">MS</span> MANISH SONAGARA</a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#index" class="active"><span>01</span> Index</a><a href="#work"><span>02</span> Work</a><a href="#experience"><span>03</span> Experience</a><a href="#stack"><span>04</span> Stack</a><a href="#credentials"><span>05</span> Credentials</a><a href="#contact"><span>06</span> Contact</a>
+  </nav>
+  <a class="resume" href="#contact">LET'S TALK ↗</a>
+</header>
+<main>
+<section class="section hero" id="index">
+  <div class="section-kicker"><b>01</b> Index</div>
+  <h1>BUILDING<br>MY NEXT <span class="gold">CHAPTER</span><br><span class="outline">ONE STEP AT A TIME.</span></h1>
+  <div class="hero-bottom">
+    <div class="intro reveal">
+      <p>I’m <strong>Manish Sonagara</strong> — a curious professional with a foundation in web development and a growing focus on business development.</p>
+      <p>I’ve completed my <strong>Bachelor of Computer Applications (BCA)</strong> from Gujarat University and completed a <strong>MERN Stack internship</strong>. Today, I work as a <strong>Business Development Executive at ElevateMe</strong>, where communication, relationship-building, and consistent learning are part of my everyday work.</p>
+      <p>I enjoy connecting technology with people, learning how businesses grow, and building the skills to make a meaningful impact.</p>
+    </div>
+    <figure class="portrait-wrap reveal"><img src="manish-photo.jpg" alt="Manish Sonagara standing by the beach at sunset"><figcaption class="portrait-label">MANISH SONAGARA / 2026</figcaption></figure>
+    <aside class="terminal reveal">
+      <div class="terminal-head"><span>PROFILE / MANISH</span><span>● ONLINE</span></div>
+      <div><span class="key">ROLE</span><span class="value">BDE · MERN STACK</span></div>
+      <div><span class="key">EDUCATION</span><span class="value">BCA · GUJARAT UNIVERSITY</span></div>
+      <div><span class="key">FOCUS</span><span class="value">BUSINESS · WEB DEVELOPMENT</span></div>
+      <div><span class="key">MINDSET</span><span class="status">LEARN / BUILD / GROW</span></div>
+      <div style="margin-top:14px;color:var(--gold)">$ ready_to_grow <span style="animation:blink 1s steps(2,start) infinite">█</span></div>
+    </aside>
+  </div>
+</section>
+<section class="section" id="work">
+  <div class="section-kicker"><b>02</b> Selected work</div>
+  <h2 class="big-title reveal">WHAT I’VE<br>BEEN BUILDING</h2>
+  <p class="section-sub reveal">A snapshot of my learning journey across web development and professional growth. Add your live project links and GitHub repositories to turn these into showcase cards.</p>
+  <article class="work-card reveal">
+    <div class="card-top"><span class="micro">PROJECT / 01</span><span class="micro">WEB DEVELOPMENT ↗</span></div>
+    <h3 class="card-title">Personal Portfolio</h3><p class="card-desc">A personal space to present my background, skills, projects, and career journey through a responsive, modern web experience.</p>
+    <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive UI</span></div>
+  </article>
+  <div class="grid3" style="margin-top:12px">
+    <article class="small-card reveal"><span class="micro">AREA / 02</span><h3>MERN Stack</h3><p>Hands-on learning across MongoDB, Express, React, and Node.js during my development journey.</p></article>
+    <article class="small-card reveal"><span class="micro">AREA / 03</span><h3>Communication</h3><p>Building professional conversations, understanding requirements, and creating stronger connections.</p></article>
+    <article class="small-card reveal"><span class="micro">AREA / 04</span><h3>Continuous Learning</h3><p>Developing technical and business skills through practice, feedback, and real-world experience.</p></article>
+  </div>
+</section>
+<section class="section" id="experience">
+  <div class="section-kicker"><b>03</b> Experience</div><h2 class="big-title reveal">WHERE I’M<br>GROWING</h2>
+  <div class="exp-table">
+    <article class="exp-row reveal"><div class="ref">01</div><div><h3 class="role">Business Development Executive</h3><div class="org">ElevateMe</div><p class="detail">Working in business development, engaging with prospective customers, communicating program information, understanding needs, and supporting outreach and follow-up activities.</p></div><div class="period">CURRENT ROLE<span>India</span></div></article>
+    <article class="exp-row reveal"><div class="ref">02</div><div><h3 class="role">MERN Stack Intern</h3><div class="org">Web Development</div><p class="detail">Built a foundation in full-stack web development and explored frontend interfaces and the MERN technology stack. Add the organization name, dates, and specific work completed here.</p></div><div class="period">INTERNSHIP<span>Details to add</span></div></article>
+  </div>
+</section>
+<section class="section" id="stack">
+  <div class="section-kicker"><b>04</b> Stack</div><h2 class="big-title reveal">TOOLS I KNOW.<br>SKILLS I’M GROWING.</h2>
+  <p class="section-sub reveal" style="margin-bottom:32px">A mix of technical foundations and professional skills I continue to develop.</p>
+  <div class="stack-grid reveal">
+    <div class="stack-item"><strong>HTML & CSS</strong><span>Frontend foundations</span></div><div class="stack-item"><strong>JavaScript</strong><span>Web programming</span></div>
+    <div class="stack-item"><strong>React</strong><span>UI development</span></div><div class="stack-item"><strong>Node.js</strong><span>Backend foundations</span></div>
+    <div class="stack-item"><strong>Express.js</strong><span>Server-side basics</span></div><div class="stack-item"><strong>MongoDB</strong><span>Database foundations</span></div>
+    <div class="stack-item"><strong>SQL</strong><span>Data queries</span></div><div class="stack-item"><strong>Java & Python</strong><span>Programming basics</span></div>
+    <div class="stack-item"><strong>Communication</strong><span>Professional conversations</span></div><div class="stack-item"><strong>Relationship Building</strong><span>Business development</span></div>
+    <div class="stack-item"><strong>Problem Solving</strong><span>Analytical thinking</span></div><div class="stack-item"><strong>Teamwork</strong><span>Collaborative mindset</span></div>
+  </div>
+</section>
+<section class="section" id="credentials">
+  <div class="section-kicker"><b>05</b> Credentials</div><h2 class="big-title reveal">EDUCATION &<br>FOUNDATIONS</h2>
+  <div class="cred-grid">
+    <div class="reveal"><div class="subheading">EDUCATION</div><article class="edu-row"><h3>Bachelor of Computer Applications (BCA)</h3><p>Gujarat University</p><div class="year">GRADUATED</div></article></div>
+    <div class="reveal"><div class="subheading">PROFESSIONAL DEVELOPMENT</div><article class="cred-row"><h3>MERN Stack Internship</h3><p>Practical exposure to full-stack web development and modern JavaScript technologies.</p></article><article class="cred-row"><h3>Learning by Doing</h3><p>Continuously improving technical knowledge, communication, and business development skills.</p></article></div>
+  </div>
+</section>
+<section class="section" id="contact">
+  <div class="section-kicker"><b>06</b> Contact</div><h2 class="contact-title reveal">LET’S TALK ABOUT<br>WHAT’S NEXT.</h2>
+  <p class="section-sub reveal">Interested in working together, discussing an opportunity, or connecting professionally? Reach out and let’s start a conversation.</p>
+  <div class="contact-list reveal">
+    <div class="contact-row"><div class="contact-label">Email</div><div class="contact-value" id="email"><a href="mailto:sonagaramanish41@gmail.com">sonagaramanish41@gmail.com</a></div><button class="copy" data-copy="email">COPY ⧉</button></div>
+    
+    <div class="contact-row"><div class="contact-label">GitHub</div><div class="contact-value" id="github"><a href="https://github.com/sonagaramanish41" target="_blank" rel="noreferrer">github.com/sonagaramanish41</a></div><a class="copy" href="https://github.com/sonagaramanish41" target="_blank" rel="noreferrer">OPEN ↗</a></div>
+    <div class="contact-row"><div class="contact-label">Based in</div><div class="contact-value">Gujarat, India</div><span class="micro">IND</span></div>
+  </div>
+</section>
+</main>
+<footer><span>© <span id="year"></span> MANISH SONAGARA</span><span>BUILT WITH INTENTION</span><a href="#index">BACK TO TOP ↑</a></footer>
+<div class="progress"><b id="progress-num">01</b> <span id="progress-name">INDEX</span><span class="progress-line"><i id="progress-fill"></i></span><span id="progress-pct">00%</span></div>
+<script>
+const sections=[...document.querySelectorAll('main section')], navLinks=[...document.querySelectorAll('.nav a')];
+const names=['INDEX','WORK','EXPERIENCE','STACK','CREDENTIALS','CONTACT'];
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');const i=sections.indexOf(entry.target);if(i>=0){navLinks.forEach((a,j)=>a.classList.toggle('active',i===j));document.getElementById('progress-num').textContent=String(i+1).padStart(2,'0');document.getElementById('progress-name').textContent=names[i];}}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+sections.forEach(s=>observer.observe(s));
+function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;const pct=max>0?Math.round(scrollY/max*100):0;document.getElementById('progress-pct').textContent=String(pct).padStart(2,'0')+'%';document.getElementById('progress-fill').style.width=pct+'%';}
+addEventListener('scroll',updateProgress,{passive:true});updateProgress();document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{const value=document.getElementById(btn.dataset.copy).textContent;try{await navigator.clipboard.writeText(value);btn.textContent='COPIED ✓';setTimeout(()=>btn.textContent='COPY ⧉',1400)}catch{btn.textContent=value}}));
+</script>
+<style>@keyframes blink{50%{opacity:0}}</style>
+</body>
+</html>
